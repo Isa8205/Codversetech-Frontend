@@ -6,6 +6,6 @@ import { JobAdverts } from './components/JobAdverts.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <JobAdverts />
   </StrictMode>,
 )

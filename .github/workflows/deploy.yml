@@ -1,0 +1,39 @@
+name: Build and Deploy to cPanel via FTP
+
+on:
+  push:
+    branches:
+      - master  # Trigger this workflow on pushes to the 'main' branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18  # Use the desired Node.js version
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Build the project using Vite
+    - name: Build project
+      run: npm run build
+
+    # Step 5: Deploy the `dist` folder via FTP
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: dist/  # Directory to upload (built files)
+        server-dir: /  # Directory on the server to deploy to
