@@ -2,6 +2,12 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronRight, Code, Cloud, Zap, Users, Star, Linkedin, Twitter, Github, ChevronLeft, Lightbulb, FlaskConical, Paintbrush, TestTube, Rocket, RefreshCw, X, MapPin, FlaskRound, Paintbrush2, PawPrint, PaintRoller } from 'lucide-react'
 import logo from "/favicon.ico"
+import Footer from './components/Footer'
+import DevelopmentProcess from './components/DevelopemetProcess'
+import { ProjectsSection } from './components/ProjectSection'
+import { ServicesSection } from './components/ServicesSection'
+import AboutSection from './components/AboutSection'
+import { TechstackSection } from './components/TechstackSection'
 
 export default function App() {
   const [projectdescription, setdescriptions] = useState([false, 0])
@@ -100,79 +106,19 @@ export default function App() {
           </div>
         </section>
 
+        <AboutSection/>
+
         {/* Services Section */}
-        <section className="py-20 bg-white dark:bg-gray-900" id='services'>
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-orange-600">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-orange-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-700"
-                >
-                  <div className="text-teal-600 mb-4 dark:text-teal-500">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2 text-orange-800 dark:text-orange-700">{service.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-100">{service.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ServicesSection/>
 
         {/* Projects section */}
-        <section className='py-20 bg-orange-50 dark:bg-gray-800' id='projects'>
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl text-orange-600 font-bold text-center mb-12">Recent projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {projects.map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-700"
-                >
-                  <div className="text-teal-600 mb-4 -mx-4 -mt-4"><img className='rounded-t-lg' src={project.image} alt={project.title} /></div>
-                  <h3 className="text-xl font-semibold mb-2 text-orange-800 dark:text-orange-600">{project.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-100">{project.description}</p>
-                  <button
-                    className="text-orange-500 border-orange-500 border-2 rounded-md px-2 py-1 my-3 hover:text-white hover:bg-orange-500 dark:border-orange-600"
-                    onClick={() => (setdescriptions([true, index]))}>Learn More</button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection/>
 
 
         {/* Product Development Process Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-500 to-teal-600 text-white dark:from-blue-600 dark:to-red-600">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center">Our Product Development Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productionSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white bg-opacity-10 p-6 rounded-lg"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className=" p-2 rounded-full mr-4">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-2xl font-semibold">{step.title}</h3>
-                  </div>
-                  <p>{step.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <DevelopmentProcess/>
+
+        <TechstackSection/>
 
         {/* Testimonial Section */}
         <section className="py-20 bg-white dark:bg-gray-900">
@@ -220,32 +166,7 @@ export default function App() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-orange-800 text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-between items-center">
-              <div className="w-full md:w-auto mb-8 md:mb-0">
-                <h3 className="text-2xl font-bold mb-4">Codversetech</h3>
-                <p className="text-orange-200">Codverse Tech provides innovative tech solutions to help businesses streamline their processes, increase efficiency, and adopt cutting-edge technologies.</p>
-                {/* <p className="text-orange-200">123 Innovation Street, Tech City, TC 12345</p> */}
-                <p className="text-orange-200">contact@codversetech.com</p>
-              </div>
-              <div className="flex space-x-6">
-                <a href="#" className="text-orange-200 hover:text-white transition duration-300" aria-label="LinkedIn">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-orange-200 hover:text-white transition duration-300" aria-label="Twitter">
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-orange-200 hover:text-white transition duration-300" aria-label="GitHub">
-                  <Github className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-            <div className="mt-8 text-center text-orange-200">
-              <p>&copy; 2024 CodverseTech Solutions. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+          <Footer/>
       </div>
     </div>
   )
