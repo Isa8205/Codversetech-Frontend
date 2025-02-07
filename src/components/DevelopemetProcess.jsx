@@ -35,23 +35,23 @@ const DevelopmentProcess = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-100" id="process">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Development Process</h2>
-        <p className="text-gray-600 mb-12">
-          At Codverse Tech, we follow a structured and efficient software development lifecycle to ensure the delivery of high-quality solutions. Our process is designed to be transparent and collaborative, involving our clients at every step.
-        </p>
-        <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="p-6 bg-white rounded-xl shadow-md flex flex-col items-center text-center">
-              <div className="mb-4">{step.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
-              <p className="text-gray-600 mt-2">{step.description}</p>
-            </div>
-          ))}
-        </div>
+    <section id="process" className="py-16 bg-gray-800">
+    <div className="max-w-5xl mx-auto px-6 text-center">
+      <h2 className="text-3xl font-bold mb-4">Our Development Process</h2>
+      <p className="text-gray-400 mb-12">
+        At Codverse Tech, we follow a structured and efficient software development lifecycle to ensure the delivery of high-quality solutions. Our process is designed to be transparent and collaborative, involving our clients at every step.
+      </p>
+      <div className="grid md:grid-cols-3 gap-8">
+        {steps.map((step, index) => (
+          <div key={index} className="bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+            <div className="mb-4">{step.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-200">{step.title}</h3>
+            <p className="text-gray-400 mt-2">{step.description}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 

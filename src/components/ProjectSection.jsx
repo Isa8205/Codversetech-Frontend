@@ -48,24 +48,17 @@ export function ProjectsSection() {
   ];
 
   return (
-    <div className="container mx-auto p-6">
-      {/* Header Section */}
-      <div className="text-center mb-10">
-        <h5 className="text-lg font-medium text-gray-600">Our Work</h5>
-        <h2 className="text-3xl font-bold mb-4">Showcasing Our Projects</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          Explore our diverse portfolio that highlights our expertise in software
-          development and innovative solutions.
-        </p>
-      </div>
-
-      {/* Divider */}
-      <hr className="my-8 border-gray-300" />
-
-      {/* Projects Grid */}
+    <section className="py-12">
+    <div className="max-w-5xl mx-auto px-6 text-center">
+      <h5 className="text-lg font-medium text-gray-300">Our Work</h5>
+      <h2 className="text-3xl font-bold mb-4">Showcasing Our Projects</h2>
+      <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+        Explore our diverse portfolio that highlights our expertise in software development and innovative solutions.
+      </p>
+      <hr className="my-8 border-gray-700" />
       <div className="grid gap-8 md:grid-cols-3">
         {projects.map((project) => (
-          <div key={project.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={project.id} className="bg-gray-800 shadow-lg rounded-lg overflow-hidden">
             <img
               className="w-full h-48 object-cover"
               src={project.imageUrl}
@@ -73,7 +66,7 @@ export function ProjectsSection() {
             />
             <div className="p-6">
               <h5 className="text-xl font-semibold mb-2">{project.title}</h5>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <p className="text-gray-400 mb-4">{project.description}</p>
               <ul className="flex flex-col gap-2 mb-4">
                 {project.details.map((detail, index) => (
                   <li key={index} className="flex items-center text-sm text-gray-500">
@@ -84,7 +77,7 @@ export function ProjectsSection() {
               </ul>
               <a
                 href={project.link}
-                className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
               >
                 View Project
               </a>
@@ -92,11 +85,10 @@ export function ProjectsSection() {
           </div>
         ))}
       </div>
-
-      {/* Footer Attribution */}
       <div className="text-center mt-10 text-xs text-gray-500">
         Powered by 10web
       </div>
     </div>
+  </section>
   );
 };
