@@ -12,8 +12,6 @@ export function ProjectsSection() {
         'Date: May 2023',
         'Outcome: Improved sales and customer satisfaction',
       ],
-      link:
-        'https://10web-site.ai/172/ready-ant/portfolio-project-e-commerce-platform-development/',
     },
     {
       id: 2,
@@ -27,8 +25,6 @@ export function ProjectsSection() {
         'Date: November 2022',
         'Outcome: Enhanced user engagement and security',
       ],
-      link:
-        'https://10web-site.ai/172/ready-ant/portfolio-project-mobile-banking-application/',
     },
     {
       id: 3,
@@ -42,17 +38,15 @@ export function ProjectsSection() {
         'Date: January 2023',
         'Outcome: Streamlined operations and reduced errors',
       ],
-      link:
-        'https://10web-site.ai/172/ready-ant/portfolio-project-inventory-management-system/',
     },
   ];
 
   return (
     <section className="py-12">
     <div className="max-w-5xl mx-auto px-6 text-center">
-      <h5 className="text-lg font-medium text-gray-300">Our Work</h5>
-      <h2 className="text-3xl font-bold mb-4">Showcasing Our Projects</h2>
-      <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+      <h5 className="text-lg font-medium text-[#64ffda]">Our Work</h5>
+      <h2 className="text-3xl font-bold mb-4 text-[#ccd6f6]">Showcasing Our Projects</h2>
+      <p className="text-[#8892b0] max-w-2xl mx-auto mb-8">
         Explore our diverse portfolio that highlights our expertise in software development and innovative solutions.
       </p>
       <hr className="my-8 border-gray-700" />
@@ -65,8 +59,8 @@ export function ProjectsSection() {
               alt={project.title}
             />
             <div className="p-6">
-              <h5 className="text-xl font-semibold mb-2">{project.title}</h5>
-              <p className="text-gray-400 mb-4">{project.description}</p>
+              <h5 className="text-xl font-semibold mb-2 text-[#ccd6f6]">{project.title}</h5>
+              <p className="text-[#8892b0] mb-4">{project.description}</p>
               <ul className="flex flex-col gap-2 mb-4">
                 {project.details.map((detail, index) => (
                   <li key={index} className="flex items-center text-sm text-gray-500">
@@ -76,17 +70,13 @@ export function ProjectsSection() {
                 ))}
               </ul>
               <a
-                href={project.link}
-                className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+                className="inline-block bg-gray-700 hover:bg-[#64ffda] text-[#64ffda] hover:text-gray-700 font-bold py-2 px-4 rounded"
               >
                 View Project
               </a>
             </div>
           </div>
         ))}
-      </div>
-      <div className="text-center mt-10 text-xs text-gray-500">
-        Powered by 10web
       </div>
     </div>
   </section>

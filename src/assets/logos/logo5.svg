@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+  <!-- Define multiple gradients for a layered effect -->
+  <defs>
+    <linearGradient id="grad5a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5b" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background abstract shape -->
+  <path d="M110,10 C150,20 200,60 200,110 C200,160 150,200 110,210 C70,200 20,160 20,110 C20,60 70,20 110,10 Z" fill="url(#grad5a)" />
+  <!-- Overlay a dynamic curved stroke -->
+  <path d="M60,80 C80,50 140,50 160,80" stroke="url(#grad5b)" stroke-width="8" fill="none" stroke-linecap="round" />
+  <!-- Company name placed subtly -->
+  <text x="50%" y="190" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold">
+    CodverseTech
+  </text>
+</svg>

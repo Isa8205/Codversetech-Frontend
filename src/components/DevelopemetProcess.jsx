@@ -37,8 +37,8 @@ const DevelopmentProcess = () => {
   return (
     <section id="process" className="py-16 bg-gray-800">
     <div className="max-w-5xl mx-auto px-6 text-center">
-      <h2 className="text-3xl font-bold mb-4">Our Development Process</h2>
-      <p className="text-gray-400 mb-12">
+      <h2 className="text-3xl font-bold mb-4 text-[#ccd6f6]">Our Development Process</h2>
+      <p className="text-[#8892b0] mb-12">
         At Codverse Tech, we follow a structured and efficient software development lifecycle to ensure the delivery of high-quality solutions. Our process is designed to be transparent and collaborative, involving our clients at every step.
       </p>
       <div className="grid md:grid-cols-3 gap-8">

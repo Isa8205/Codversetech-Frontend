@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
       <div className="my-8 border-t border-gray-700"></div>
       <div className="flex justify-between items-center">
-        <p className="text-gray-400">© 2025 Codverse Tech. All rights reserved.</p>
+        <p className="text-[#8892b0]">© 2025 Codverse Tech. All rights reserved.</p>
         <div className="flex space-x-4">
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-200">
             <FaLinkedin size={24} />

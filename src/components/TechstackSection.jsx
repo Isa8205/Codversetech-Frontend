@@ -11,9 +11,9 @@ const techStack = [
 
 export function TechstackSection() {
   return (
-    <section className="py-12 bg-gray-900 text-white">
+    <section className="py-12 bg-gray-900 text-[#8892b0]">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-8">Our Technology Stack</h2>
+        <h2 className="text-3xl font-bold mb-8 text-[#ccd6f6]">Our Technology Stack</h2>
         <p className="text-lg mb-12">We leverage cutting-edge technologies to build robust and scalable solutions.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {techStack.map((tech, index) => (

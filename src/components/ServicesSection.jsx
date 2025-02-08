@@ -4,8 +4,8 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-12">
     <div className="max-w-5xl mx-auto px-6 text-center">
-      <h2 className="text-3xl font-bold mb-4">Explore Our Software Development Services</h2>
-      <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+      <h2 className="text-3xl font-bold mb-4 text-[#ccd6f6]">Explore Our Software Development Services</h2>
+      <p className="text-lg text-[#8892b0] max-w-2xl mx-auto mb-8">
         At Codverse Tech, we offer a range of software development services designed to meet the unique needs of your business. From custom software solutions to seamless system integration, our expert team is dedicated to delivering innovative and efficient technology solutions that drive success.
       </p>
       <div className="grid gap-8 md:grid-cols-3">
@@ -25,7 +25,7 @@ export function ServicesSection() {
             </p>
             <a
               href="https://10web-site.ai/172/ready-ant/custom-software-development/"
-              className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+              className="inline-block bg-gray-700 hover:bg-gray-600 text-[#64ffda] font-bold py-2 px-4 rounded"
             >
               Learn More
             </a>
@@ -48,7 +48,7 @@ export function ServicesSection() {
             </p>
             <a
               href="https://10web-site.ai/172/ready-ant/mobile-application-development/"
-              className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+              className="inline-block bg-gray-700 hover:bg-gray-600 text-[#64ffda] font-bold py-2 px-4 rounded"
             >
               Learn More
             </a>
@@ -71,15 +71,12 @@ export function ServicesSection() {
             </p>
             <a
               href="https://10web-site.ai/172/ready-ant/system-integration/"
-              className="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+              className="inline-block bg-gray-700 hover:bg-gray-600 text-[#64ffda] font-bold py-2 px-4 rounded"
             >
               Learn More
             </a>
           </div>
         </div>
-      </div>
-      <div className="text-center mt-10 text-xs text-gray-500">
-        Powered by 10web
       </div>
     </div>
   </section>
