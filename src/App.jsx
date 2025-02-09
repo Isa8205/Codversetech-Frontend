@@ -8,11 +8,47 @@ import { ProjectsSection } from './components/ProjectSection'
 import { ServicesSection } from './components/ServicesSection'
 import AboutSection from './components/AboutSection'
 import { TechstackSection } from './components/TechstackSection'
+import Navbar from './components/Navbar'
 import heroImage from "./assets/images/hero.jpg"
+import HeroSection from './components/HeroSection'
+
+const testimonials = [
+    {
+      text: "The team at Developins transformed our outdated system into a cutting-edge platform. Their expertise and attention to detail are unmatched!",
+      name: "Wesley Too",
+      title: "Chairman of Olmismis FCS"
+    },
+    {
+      text: "Working with Developins was a game-changer for our business. They delivered a scalable solution that exceeded our expectations.",
+      name: "Elijah Langat",
+      title: "Projects lead at Izrah"
+    },
+    {
+      text: "Developins not only built our software but also provided ongoing support and guidance. Their professionalism and technical skills are top-notch.",
+      name: "Michael Brown",
+      title: "Founder & CEO at TechNova"
+    },
+    {
+      text: "The level of customization and care that Developins put into our project was outstanding. They truly go above and beyond for their clients.",
+      name: "Laura Thompson",
+      title: "VP of Product at BrightMind"
+    },
+    {
+      text: "Developins delivered a robust and user-friendly application that has received rave reviews from our customers. We couldn’t be happier!",
+      name: "Daniel Harris",
+      title: "CEO at Appify"
+    },
+    {
+      text: "Their ability to solve complex problems with elegant solutions is remarkable. Developins is our go-to partner for all things software.",
+      name: "Olivia Clark",
+      title: "Director of Technology at SmartPath"
+    }
+  ];
 
 export default function App() {
   return (
     <div className="bg-gray-900 text-white">
+      <Navbar/>
       {/*
         ===============================
         Hero Section
@@ -20,43 +56,7 @@ export default function App() {
         - Headline, subheadline, and call-to-action button use uniform dark-theme colors.
         ===============================
       */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image with a dark overlay */}
-        <img
-          src={heroImage}
-          alt="Cover Image"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-100"
-        />
-        <div className="absolute inset-0" />
-        <div className="relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-6xl font-bold mb-4 flex items-center justify-center"
-          >
-            <img className="inline h-16 mr-2" src={logo} alt="logo" />
-            odverseTech
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-xl mb-8 text-gray-300"
-          >
-            Innovating for a brighter tomorrow
-          </motion.p>
-          <a href="#services">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300"
-            >
-              Explore Our Services
-            </motion.button>
-          </a>
-        </div>
-      </section>
+      <HeroSection/>
 
       {/*
         ===============================
@@ -112,7 +112,7 @@ export default function App() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-12 text-gray-300">What Our Clients Say</h2>
           <div className="flex flex-wrap justify-center gap-8">
-            {[1, 5, 5].map((_, index) => (
+            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -126,9 +126,9 @@ export default function App() {
                   ))}
                 </div>
                 <p className="text-lg mb-4 text-gray-300">
-                  "FutureTech Solutions has revolutionized our business with their innovative AI solutions. Highly recommended!"
+                  "{testimonial.text}"
                 </p>
-                <p className="font-semibold text-gray-200">- John Doe, CEO of TechCorp</p>
+                <p className="font-semibold text-gray-200">- {testimonial.name}, {testimonial.title}</p>
               </motion.div>
             ))}
           </div>

@@ -1,4 +1,5 @@
-import { FaJs, FaPython, FaReact, FaNodeJs, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaJs, FaPython, FaReact, FaNodeJs, FaDocker, FaGitAlt } from 'react-icons/fa';
+import { SiKotlin, SiTypescript } from 'react-icons/si'; // Assuming you're using react-icons
 
 const techStack = [
   { icon: <FaJs className="text-yellow-500 text-4xl" />, name: "JavaScript", description: "Versatile language for both front-end and back-end development." },
@@ -7,8 +8,9 @@ const techStack = [
   { icon: <FaNodeJs className="text-green-500 text-4xl" />, name: "Node.js", description: "Enables efficient server-side scripting." },
   { icon: <FaDocker className="text-blue-600 text-4xl" />, name: "Docker", description: "Facilitates containerization for seamless deployment." },
   { icon: <FaGitAlt className="text-red-500 text-4xl" />, name: "Git", description: "Essential for version control and collaboration." },
+  { icon: <SiKotlin className="text-purple-500 text-4xl" />, name: "Kotlin", description: "Modern, concise language for Android and server-side development." },
+  { icon: <SiTypescript className="text-blue-700 text-4xl" />, name: "TypeScript", description: "Adds static typing to JavaScript for scalable applications." },
 ];
-
 export function TechstackSection() {
   return (
     <section className="py-12 bg-gray-900 text-[#8892b0]">
