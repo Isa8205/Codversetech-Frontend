@@ -11,6 +11,7 @@ import { TechstackSection } from './components/TechstackSection'
 import Navbar from './components/Navbar'
 import heroImage from "./assets/images/hero.jpg"
 import HeroSection from './components/HeroSection'
+import ContactSection from './components/ContactSection'
 
 const testimonials = [
     {
@@ -134,6 +135,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Contact section with a google map image */}
+      <ContactSection/>
 
       {/*
         ===============================
